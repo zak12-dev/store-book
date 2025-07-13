@@ -1,7 +1,6 @@
 'use client'
 
 import { Card, CardContent } from "@/components/ui/card"
-import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 
 type Shelf = {
