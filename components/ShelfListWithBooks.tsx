@@ -90,10 +90,12 @@ export default function ShelfListWithBooks() {
     queryKey: ['shelf-books', selectedShelfId],
     queryFn: () => fetchBooksFromShelf(selectedShelfId!),
     enabled: !!selectedShelfId,
-    onSuccess: (data) => {
-      setFilteredBooks(data)
+    
     },
-  })
+  )
+  useEffect(() => {
+    if (books) setFilteredBooks(books)
+  }, [books])
   
   return (
     <div className="flex w-full h-full p-2 gap-1 fixed">
